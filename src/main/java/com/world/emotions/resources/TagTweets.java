@@ -1,14 +1,16 @@
 package com.world.emotions.resources;
 
+import java.util.ArrayList;
+
 public class TagTweets {
 	
-	Tweets tweet[];
+	ArrayList<Tweets> tweet;
 
-	public Tweets[] getTweet() {
+	public ArrayList<Tweets> getTweet() {
 		return tweet;
 	}
 
-	public void setTweet(Tweets[] tweet) {
+	public void setTweet(ArrayList<Tweets> tweet) {
 		this.tweet = tweet;
 	}
 

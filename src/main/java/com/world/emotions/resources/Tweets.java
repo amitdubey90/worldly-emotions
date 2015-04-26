@@ -5,6 +5,7 @@ public class Tweets {
 	long tweet_Id;
 	String tweet_Text;
 	String  url;
+	String user;
 	
 	public long getTweet_Id() {
 		return tweet_Id;
@@ -30,6 +31,6 @@ public class Tweets {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	String user;
+	
 
 }

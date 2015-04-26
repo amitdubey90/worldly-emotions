@@ -1,14 +1,16 @@
 package com.world.emotions.resources;
 
+import java.util.ArrayList;
+
 public class CountryTrends {
 
-	TrendsScore tscore[];
+	ArrayList<TrendsScore> tscore;
 
-	public TrendsScore[] getTscore() {
+	public ArrayList<TrendsScore> getTscore() {
 		return tscore;
 	}
 
-	public void setTscore(TrendsScore[] tscore) {
+	public void setTscore(ArrayList<TrendsScore> tscore) {
 		this.tscore = tscore;
 	}
 

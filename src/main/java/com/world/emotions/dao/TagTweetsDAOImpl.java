@@ -46,7 +46,7 @@ public class TagTweetsDAOImpl implements TagTweetsDAO {
 			while(rs.next()){
 				
 				Tweets obj= new Tweets();
-				//System.out.println(rs.getString("text"));
+				System.out.println(rs.getString("text"));
 				obj.setTweet_Text(rs.getString("text"));
 				obj.setTweet_Id(rs.getLong("tweet_id"));
 				obj.setUrl(rs.getString("profile_img_url"));

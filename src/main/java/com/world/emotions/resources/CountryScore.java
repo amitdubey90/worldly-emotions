@@ -24,7 +24,5 @@ public class CountryScore {
 	public void setSentiment(String sentiment) {
 		this.sentiment = sentiment;
 	}
-	
-	
 
 }

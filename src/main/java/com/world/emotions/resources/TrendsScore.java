@@ -3,8 +3,20 @@ package com.world.emotions.resources;
 public class TrendsScore {
 	
 	String hashtag;
+	//TODO We dont need int. We require double.. Please reomove the int field and use the double field
 	int score;
 	String sentiment;
+	
+	double sentimentScore;
+	
+	
+	
+	public double getSentimentScore() {
+		return sentimentScore;
+	}
+	public void setSentimentScore(double sentimentScore) {
+		this.sentimentScore = sentimentScore;
+	}
 	public String getHashtag() {
 		return hashtag;
 	}

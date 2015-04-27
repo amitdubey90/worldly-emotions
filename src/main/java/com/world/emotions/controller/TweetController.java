@@ -1,5 +1,7 @@
 package com.world.emotions.controller;
 
+import java.util.List;
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,7 @@ import com.world.emotions.dao.TagTweetsDAOImpl;
 import com.world.emotions.resources.CountryTrends;
 import com.world.emotions.resources.CountryWiseTrendSentiment;
 import com.world.emotions.resources.TagTweets;
+import com.world.emotions.resources.TrendsScore;
 
 
 
@@ -23,7 +26,7 @@ import com.world.emotions.resources.TagTweets;
 @RestController
 @EnableAutoConfiguration
 @ComponentScan
-@RequestMapping("/api/v1/*")
+@RequestMapping("/api/v1/")
 public class TweetController {
 	
      public static  TagTweetsDAO tt= new TagTweetsDAOImpl();
@@ -42,8 +45,9 @@ public class TweetController {
 	@RequestMapping(value="/getcountrytrends/{country_name}", method=RequestMethod.GET)
 	public ResponseEntity<CountryTrends> getTrendsForCountry(@PathVariable String country_name ){
 		
-		CountryTrends c= ct.getCountryTrends(country_name);                          
-	
+		List<TrendsScore> trends = ct.getTrendsForCountry(country_name);                          
+		CountryTrends c = new CountryTrends();
+		c.setTscore(trends);
 		return new ResponseEntity<CountryTrends>(c, HttpStatus.OK);
 		
 	}

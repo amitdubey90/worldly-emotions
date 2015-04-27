@@ -1,4 +1,4 @@
-package com.world.emotions.Main;
+package com.world.emotions;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -9,8 +9,6 @@ public class MySQLConnection {
 
 	private static Connection connection;
 
-
-
 	private static String URL = "jdbc:mysql://cmpe239.ckihmrqdoc0a.us-west-1.rds.amazonaws.com:3306/tweetdb";
 	private static String user = "cmpe239user";
 	private static String password = "Newuser123";

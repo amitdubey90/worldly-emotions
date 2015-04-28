@@ -35,7 +35,7 @@ public class TweetController {
 	@RequestMapping(value="/countrywisetrendsentiment", method=RequestMethod.GET)
 	public ResponseEntity<CountryWiseTrendSentiment> getAllTrendSentiment( ){
 		
-		CountryWiseTrendSentiment c= new CountryWiseTrendSentiment();  // To be written
+		CountryWiseTrendSentiment c= ct.getSentimentForCountry();  
 	
 		return new ResponseEntity<CountryWiseTrendSentiment>(c, HttpStatus.OK);
 		
@@ -44,6 +44,8 @@ public class TweetController {
 	
 	@RequestMapping(value="/getcountrytrends/{country_name}", method=RequestMethod.GET)
 	public ResponseEntity<CountryTrends> getTrendsForCountry(@PathVariable String country_name ){
+		
+		System.out.println("received : "+country_name);
 		
 		List<TrendsScore> trends = ct.getTrendsForCountry(country_name);                          
 		CountryTrends c = new CountryTrends();

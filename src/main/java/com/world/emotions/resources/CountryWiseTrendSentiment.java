@@ -1,16 +1,17 @@
 package com.world.emotions.resources;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CountryWiseTrendSentiment {
 	
-	ArrayList<CountryScore> cscore;
+	List<CountryScore> cscore;
 
-	public ArrayList<CountryScore> getCscore() {
+	public List<CountryScore> getCscore() {
 		return cscore;
 	}
 
-	public void setCscore(ArrayList<CountryScore> cscore) {
+	public void setCscore(List<CountryScore> cscore) {
 		this.cscore = cscore;
 	}
 

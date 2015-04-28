@@ -24,11 +24,11 @@ public class TagTweetsDAOImpl implements TagTweetsDAO {
 		try {
 			conn=MySQLConnection.getConnection();
 
-			String query="select * from trends where hashtag=?";
+			String query="select * from trends where lower(hashtag) LIKE lower(?)";
 
 
 			PreparedStatement command = (PreparedStatement) conn.prepareStatement(query);
-		    command.setString(1, tag);
+		    command.setString(1, "%"+tag+"%");
 			ResultSet rs= command.executeQuery();
 			
 			

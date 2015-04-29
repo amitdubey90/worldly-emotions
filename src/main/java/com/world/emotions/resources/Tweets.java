@@ -1,11 +1,14 @@
 package com.world.emotions.resources;
 
+import com.world.emotions.util.TweetSentiment;
+
 public class Tweets {
 	
 	long tweet_Id;
 	String tweet_Text;
 	String  url;
 	String user;
+	TweetSentiment sentiment;
 	
 	public long getTweet_Id() {
 		return tweet_Id;
@@ -30,6 +33,12 @@ public class Tweets {
 	}
 	public void setUser(String user) {
 		this.user = user;
+	}
+	public TweetSentiment getSentiment() {
+		return sentiment;
+	}
+	public void setSentiment(TweetSentiment sentiment) {
+		this.sentiment = sentiment;
 	}
 	
 
